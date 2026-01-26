@@ -1,0 +1,5 @@
+FirstNumber = input("First Number: ")
+SecondNumber = input("Second Number: ")
+ThirdNumber = input("Third Number: ")
+sum = int(FirstNumber) + int(SecondNumber) + int(ThirdNumber)
+print(sum)
