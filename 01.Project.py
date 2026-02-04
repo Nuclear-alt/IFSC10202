@@ -1,19 +1,20 @@
 Seconds = 50000001
-years = 365
-lengthoftime = Seconds // years
-print(lengthoftime)
+years = 365 * 24 * 60 * 60
+years = Seconds // years
 
-lengthoftime = 136986
-days = 24
-lengthoftime = lengthoftime // days
-print(lengthoftime)
+days = 24 * 60 * 60
+days = Seconds // days
 
-lengthoftime = 5707
-hours = 60
-lengthoftime = lengthoftime // 60
-print(lengthoftime)
+hours = 60 * 60
+hours = Seconds // hours
 
-lengthoftime = 95
 minutes = 60
-lengthoftime = lengthoftime // minutes
-print(lengthoftime)
+minutes = Seconds // minutes
+
+Seconds = minutes // Seconds
+
+print("Years:", years)
+print("Days:", days)
+print("Hours:", hours)
+print("Minutes:", minutes)
+print("Seconds:", Seconds)
