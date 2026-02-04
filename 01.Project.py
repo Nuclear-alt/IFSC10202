@@ -1,21 +1,19 @@
-
 Seconds = 50000001
-years = 365 * 24 * 60 * 60
-years = Seconds // years
-Seconds = Seconds - years
 
-days = 24 * 60 * 60
-days = Seconds // days
-Seconds = Seconds - days
+seconds_in_a_years = 365 * 24 * 60 * 60
+years = Seconds // seconds_in_a_years
+Seconds = Seconds - years * seconds_in_a_years
 
-hours = 60 * 60
-hours = Seconds // hours
-Seconds = Seconds - hours
+seconds_in_a_days = 24 * 60 * 60
+days = Seconds // seconds_in_a_days
+Seconds = Seconds - days * seconds_in_a_days
 
-minutes = 60
-minutes = Seconds // minutes
+seconds_in_a_hours = 60 * 60
+hours = Seconds // seconds_in_a_hours
+Seconds = Seconds - hours * seconds_in_a_hours
 
-Seconds = Seconds - minutes
+minutes = Seconds // 60
+Seconds = Seconds - minutes * 60
 
 print("Years:", years)
 print("Days:", days)
