@@ -7,8 +7,8 @@ E1 = Longitude = 21
 E2 = Longitude = 12
 
 S1 = S1 * pi / 180
-E1 = E1 * pi / 180
 S2 = S2 * pi / 180
+E1 = E1 * pi / 180
 E2 = E2 * pi / 180
 
 d = EnterRadiusofSphere * acos(
