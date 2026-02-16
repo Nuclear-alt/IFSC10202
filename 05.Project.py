@@ -1,8 +1,9 @@
-
-for i in range(1):
+for i in range(1, 10000):
     print(i)
-for r in range(10000):
-    print(r)
-while i <= 10:
-    print(i ** 1)
-    i += 1
+
+Number = i
+zero = 0
+
+while Number > 0:
+    Number //= 10
+    zero += 1
