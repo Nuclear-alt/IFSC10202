@@ -1,4 +1,6 @@
-H = int(input("Enter maximum height: "))
+height = input("Enter maximum height: ")
+H = int(height)
+
 for i in range(1, H + 1):
     for r in range(1, i + 1):
         print("*", end="")
