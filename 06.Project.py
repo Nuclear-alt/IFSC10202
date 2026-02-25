@@ -10,3 +10,9 @@ with open(First_file, "w") as output_file:
     with open(Second_file, "r") as input_file:
         for line in input_file:
             input_count += 1
+
+            output_file.write(line)
+            output_count += 1
+
+            if "Insert Merge File Here" in line:
+                
