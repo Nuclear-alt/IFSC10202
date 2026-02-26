@@ -11,8 +11,16 @@ with open(First_file, "w") as output_file:
         for line in input_file:
             input_count += 1
 
-            output_file.write(line)
-            output_count += 1
-
             if "Insert Merge File Here" in line:
-                
+                with open(third_file, "r") as merge_file:
+                    for merge_line in merge_file:
+                        merge_count += 1
+                        output_file.write(merge_line)
+                        output_count += 1
+            else:
+                output_file.write(line)
+                output_count += 1
+
+print("Input file records :", input_count)
+print("Merge file records :", merge_count)
+print("Output file records:", output_count)
