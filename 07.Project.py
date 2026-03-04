@@ -12,10 +12,19 @@ def ParseDegreeString(ddmmss):
     degrees = float(degrees)
     minutes = float(minutes)
     seconds = float(seconds)
-
     return degrees, minutes, seconds
 
 def DDMMSStoDecimal(degrees, minutes, seconds):
     decimal_degrees = degrees + (minutes / 60) + (seconds / 3600)
     return decimal_degrees
 
+input_file = open("07.Project Angles Input.txt", "r")
+output_file = open("07.Project Angles output.txt", "w")
+
+count = 0
+
+for line in input_file:
+    line = line.strip()
+
+    if line != "":
+        degrees, minutes, seconds = ParseDegreeString(line)
