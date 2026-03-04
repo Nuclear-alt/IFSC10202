@@ -15,7 +15,7 @@ def ParseDegreeString(ddmmss):
 
     return degrees, minutes, seconds
 
-def DDMMSStoDecimal(degrees, minytes, seconds):
+def DDMMSStoDecimal(degrees, minutes, seconds):
     decimal_degrees = degrees + (minutes / 60) + (seconds / 3600)
     return decimal_degrees
 
