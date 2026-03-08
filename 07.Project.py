@@ -28,3 +28,12 @@ for line in input_file:
 
     if line != "":
         degrees, minutes, seconds = ParseDegreeString(line)
+        decimal_value = DDMMSStoDecimal(degrees, minutes, seconds)
+
+        output_file.write(str(decimal_value) + "/n")
+        count += 1
+
+input_file.close()
+output_file.close()
+
+print(count, "records processed")
