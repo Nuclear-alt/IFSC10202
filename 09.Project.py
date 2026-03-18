@@ -1,11 +1,9 @@
-file = open("09.Project Distances.csv", "r")
-table = []
-
-for line in file:
-    line = line.strip()
-    row = line.split(",")
-    table.append(row)
-file.close()
+with open("09.Project Distances.csv", "r") as file:
+    table = []
+    for line in file:
+        line = line.strip()
+        row = line.split(",")
+        table.append(row)
 
 for row in table:
     for item in row:
