@@ -4,7 +4,7 @@ class Student:
         self.FirstName = firstname.strip()
         self.LastName = lastname.strip()
         self.TNumber = tnumber.strip()
-        self.Grades = scores  # list of strings (may contain empty values)
+        self.Grades = scores
 
     def RunningAverage(self):
         valid_scores = [float(score) for score in self.Grades if score.strip() != ""]
