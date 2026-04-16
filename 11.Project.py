@@ -1,11 +1,11 @@
-class student:
-    def _init_(self, firstname, lastname, tnumber):
+class Student:
+    def __init__(self, firstname, lastname, tnumber):
         self.FirstName = firstname
         self.LastName = lastname
         self.TNumber = tnumber
-        self.Grades = {}
+        self.Grades = []  # FIXED
 
-    def RunninAverage(self):
+    def RunningAverage(self):
         total = 0
         count = 0
         for grade in self.Grades:
@@ -13,16 +13,19 @@ class student:
                 total += float(grade)
                 count += 1
         return total / count if count > 0 else 0
-    
+
     def TotalAverage(self):
         total = 0
         count = len(self.Grades)
+        if count == 0:
+            return 0
+
         for grade in self.Grades:
             if grade == "":
                 total += 0
             else:
                 total += float(grade)
-        return total / count if count > 0 else 0
+        return total / count
 
     def LetterGrade(self):
         avg = self.TotalAverage()
@@ -42,7 +45,7 @@ class StudentList:
         self.Studentlist = []
 
     def add_student(self, firstname, lastname, tnumber):
-        student = Student(firstname, lastname, tnumber)
+        student = Student(firstname, lastname, tnumber)  # FIXED
         self.Studentlist.append(student)
 
     def find_student(self, tnumber):
@@ -85,7 +88,6 @@ def main():
     students = StudentList()
 
     students.add_student_from_file("11.Project Students.txt")
-
     students.add_scores_from_file("11.Project Scores.txt")
 
     students.print_student_list()
