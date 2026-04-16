@@ -84,13 +84,10 @@ class StudentList:
 def main():
     students = StudentList()
 
-    # Load students
     students.add_student_from_file("11.Project Students.txt")
 
-    # Load scores
     students.add_scores_from_file("11.Project Scores.txt")
 
-    # Print results
     students.print_student_list()
 
 if __name__ == "__main__":
